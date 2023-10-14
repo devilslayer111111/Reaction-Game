@@ -8,9 +8,20 @@
         background-color: red;
         position: relative;
     }
+    .text-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #333; /* Background color for better visibility */
+        color: white; /* Text color */
+        padding: 10px; /* Add some padding for better styling */
+    }
 </style>
 </head>
 <body>
+    <div class="text-container">
+       Created By AD.
+    </div>
     <h1>Reaction Game</h1>
     <p>Click the Box as soooo..n as you can!</p>
     <div id="shape"></div>
@@ -59,7 +70,7 @@
             document.getElementById("shape").style.display = "none";
             var end = new Date().getTime();
             var reacTime = (end - start)/1000;
-            alert(reacTime+"s");
+            alert("Your reaction time is \n"+reacTime+"s");
             move();
         }
     </script>
